@@ -9,10 +9,10 @@
 
 ## 🌐 Live Public Link
 
-- **Live Public Application:** [https://artificial-cardiac-april-divorce.trycloudflare.com](https://artificial-cardiac-april-divorce.trycloudflare.com)
+- **Live Public Application:** [https://task-prize-adapter-arrange.trycloudflare.com](https://task-prize-adapter-arrange.trycloudflare.com)
   *(Accessible instantly on all mobile phones and desktop browsers with no passwords or prompts)*
-- **Caregiver Dashboard:** [https://artificial-cardiac-april-divorce.trycloudflare.com/caregiver/dashboard](https://artificial-cardiac-april-divorce.trycloudflare.com/caregiver/dashboard)
-- **Patient Dashboard:** [https://artificial-cardiac-april-divorce.trycloudflare.com/patient/dashboard](https://artificial-cardiac-april-divorce.trycloudflare.com/patient/dashboard)
+- **Caregiver Dashboard:** [https://task-prize-adapter-arrange.trycloudflare.com/caregiver/dashboard](https://task-prize-adapter-arrange.trycloudflare.com/caregiver/dashboard)
+- **Patient Dashboard:** [https://task-prize-adapter-arrange.trycloudflare.com/patient/dashboard](https://task-prize-adapter-arrange.trycloudflare.com/patient/dashboard)
 
 ---
 
