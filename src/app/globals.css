@@ -1,0 +1,430 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==============================================================================
+   MINDBLOOM – CALM HEALTHCARE & WELLNESS DESIGN SYSTEM
+   Designed for Older Adults & Caregivers (WCAG AA+ Accessible)
+   ============================================================================== */
+
+:root {
+  /* Default Calm Palette (Soft Porcelain, Deep Navy & Calming Sage) */
+  --background: 210 33% 98%; /* #f8fafc */
+  --foreground: 216 52% 16%; /* #132438 */
+  --card: 0 0% 100%;
+  --card-foreground: 216 52% 16%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 216 52% 16%;
+  --primary: 213 52% 25%; /* #1e3a5f - Deep Navy */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 153 46% 32%; /* #2d7a58 - Calming Sage Green */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 210 30% 96%;
+  --muted-foreground: 215 20% 40%;
+  --accent: 153 46% 94%; /* #eaf5f0 */
+  --accent-foreground: 153 46% 25%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 28% 90%; /* #dbe6ef */
+  --input: 214 28% 90%;
+  --ring: 213 52% 25%;
+  --radius: 1.5rem;
+
+  /* MindBloom Semantic Palette */
+  --bloom-darkest: #f8fafc;
+  --bloom-dark: #ffffff;
+  --bloom-navy: #1e3a5f;
+  --bloom-surface: #ffffff;
+  --bloom-card: #ffffff;
+  --bloom-border: #dbe6ef;
+  --bloom-teal: #2d7a58;
+  --bloom-cyan: #1e3a5f;
+}
+
+/* Dark Theme (Tranquil Night Mode) */
+html.dark {
+  --background: 218 52% 10%; /* #0c1626 */
+  --foreground: 210 40% 98%;
+  --card: 218 45% 15%; /* #142238 */
+  --card-foreground: 210 40% 98%;
+  --popover: 218 45% 15%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 199 89% 55%;
+  --primary-foreground: 218 52% 10%;
+  --secondary: 153 46% 45%;
+  --secondary-foreground: 218 52% 10%;
+  --muted: 218 35% 20%;
+  --muted-foreground: 215 20% 75%;
+  --accent: 218 35% 22%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 218 35% 24%;
+  --input: 218 35% 24%;
+  --ring: 199 89% 55%;
+
+  --bloom-darkest: #0c1626;
+  --bloom-dark: #142238;
+  --bloom-navy: #1c2e4a;
+  --bloom-surface: #192a45;
+  --bloom-card: #142238;
+  --bloom-border: #243859;
+  --bloom-teal: #48bb78;
+  --bloom-cyan: #38bdf8;
+}
+
+/* Calm Mode (Ultra-gentle warm cream & subdued contrast for agitation reduction) */
+html.calm-mode {
+  --background: 40 40% 97%; /* #fbf9f4 */
+  --foreground: 210 20% 20%; /* #2c3539 */
+  --border: 38 25% 88%; /* #e8e2d8 */
+  --bloom-darkest: #fbf9f4;
+  --bloom-dark: #ffffff;
+  --bloom-surface: #ffffff;
+  --bloom-card: #ffffff;
+  --bloom-border: #e8e2d8;
+  --bloom-navy: #2d3b4e;
+  --bloom-teal: #3b7a57;
+  --bloom-cyan: #2d3b4e;
+}
+
+body {
+  background-color: var(--bloom-darkest);
+  color: #1e293b;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  min-height: 100vh;
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html.dark body {
+  background-color: #0c1626;
+  color: #f8fafc;
+}
+
+html.calm-mode body {
+  background-color: #fbf9f4;
+  color: #2c3539;
+}
+
+/* Light Theme text readability mappings */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4 {
+  color: #0f233a;
+  letter-spacing: -0.015em;
+}
+
+html:not(.dark) .text-white {
+  color: #0f233a;
+}
+
+/* Ensure buttons with solid colorful backgrounds retain white text in light mode */
+html:not(.dark) button.bg-purple-600,
+html:not(.dark) button.bg-purple-500,
+html:not(.dark) button.bg-rose-500,
+html:not(.dark) button.bg-rose-600,
+html:not(.dark) button.bg-emerald-600,
+html:not(.dark) button.bg-teal-600,
+html:not(.dark) button.bg-teal-700,
+html:not(.dark) button.bg-slate-800,
+html:not(.dark) button.bg-slate-900,
+html:not(.dark) a.bg-purple-600,
+html:not(.dark) a.bg-teal-600,
+html:not(.dark) [class*="bg-gradient-to-r"][class*="text-white"],
+html:not(.dark) .btn-solid-text,
+html:not(.dark) .text-white-override {
+  color: #ffffff !important;
+}
+
+html:not(.dark) .text-slate-100 {
+  color: #0f233a;
+}
+
+html:not(.dark) .text-slate-200 {
+  color: #1e293b;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #334155;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #475569;
+}
+
+/* Gentle, soft shadows */
+html:not(.dark) .bg-bloom-card,
+html:not(.dark) .bg-bloom-dark,
+html:not(.dark) .shadow-xl,
+html:not(.dark) .shadow-2xl {
+  box-shadow: 0 4px 20px -2px rgba(15, 35, 58, 0.05), 0 2px 8px -1px rgba(15, 35, 58, 0.03);
+}
+
+/* Accessibility Focus Indicators */
+*:focus-visible {
+  outline: 3px solid #1e3a5f !important;
+  outline-offset: 3px !important;
+}
+
+/* Dementia-Friendly Font Scaling */
+html.font-scale-normal {
+  font-size: 16px;
+}
+
+html.font-scale-large {
+  font-size: 19px;
+}
+
+html.font-scale-extra-large {
+  font-size: 22px;
+}
+
+/* High Contrast Mode */
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #fef08a !important;
+}
+
+html.high-contrast button,
+html.high-contrast a,
+html.high-contrast div {
+  border-color: #facc15 !important;
+}
+
+html.high-contrast .text-white,
+html.high-contrast .text-slate-100,
+html.high-contrast .text-slate-200,
+html.high-contrast .text-slate-300,
+html.high-contrast .text-slate-400 {
+  color: #fef08a !important;
+}
+
+/* Reduce Motion Mode */
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.001s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001s !important;
+  scroll-behavior: auto !important;
+}
+
+/* Custom gentle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Soft Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bloom-darkest);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bloom-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==============================================================================
+   PREMIUM GLASSMORPHISM & SUBTLE 3D VISUAL SYSTEM
+   Designed for Calm Healthcare, Dementia Accessibility & Sensory Peace
+   ============================================================================== */
+
+/* 1. Refined Glassmorphism Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 
+    0 12px 36px -4px rgba(15, 35, 58, 0.06),
+    0 2px 8px -2px rgba(15, 35, 58, 0.04),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+html.dark .glass-panel {
+  background: rgba(20, 34, 56, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 14px 40px -4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* 2. Interactive Glass Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 
+    0 6px 20px -3px rgba(15, 35, 58, 0.04),
+    0 2px 6px -1px rgba(15, 35, 58, 0.02);
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45, 122, 88, 0.4);
+  box-shadow: 
+    0 14px 30px -4px rgba(15, 35, 58, 0.08),
+    0 4px 10px -2px rgba(15, 35, 58, 0.04);
+}
+
+.glass-card:active {
+  transform: scale(0.98);
+}
+
+html.dark .glass-card {
+  background: rgba(20, 34, 56, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .glass-card:hover {
+  border-color: rgba(72, 187, 120, 0.4);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Subtle 3D Card Depth for Games (Memory Match) */
+.card-3d {
+  perspective: 800px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.34, 1.3, 0.64, 1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.card-3d:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -4px rgba(45, 122, 88, 0.14), 0 3px 8px -2px rgba(0, 0, 0, 0.04);
+}
+
+.card-3d-selected {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 16px 32px -4px rgba(45, 122, 88, 0.22),
+    0 0 0 3px rgba(45, 122, 88, 0.35);
+}
+
+/* 4. Gentle Bloom & Floating Keyframes */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+.animate-gentleFloat {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+@keyframes calmPulseRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulseRing {
+  animation: calmPulseRing 2.4s ease-in-out infinite;
+}
+
+@keyframes calmBloomPetal {
+  0% {
+    transform: scale(0.7) rotate(-5deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.04) rotate(1deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-calmBloom {
+  animation: calmBloomPetal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 5. Accessibility Overrides (Calm Mode & Reduced Motion) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gentleFloat,
+  .animate-pulseRing,
+  .animate-calmBloom,
+  .card-3d,
+  .glass-card {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+html.reduce-motion .animate-gentleFloat,
+html.reduce-motion .animate-pulseRing,
+html.reduce-motion .animate-calmBloom,
+html.reduce-motion .card-3d,
+html.reduce-motion .glass-card {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+html.calm-mode .glass-panel,
+html.calm-mode .glass-card {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1.5px solid #e8e2d8 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  transform: none !important;
+}
+
+html.calm-mode .card-3d {
+  transform: none !important;
+}
+
+html.calm-mode .animate-gentleFloat,
+html.calm-mode .animate-pulseRing,
+html.calm-mode .animate-calmBloom {
+  animation: none !important;
+  transform: none !important;
+}
