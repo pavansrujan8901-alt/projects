@@ -9,10 +9,10 @@
 
 ## 🌐 Live Public Link
 
-- **Live Public Application:** [https://task-prize-adapter-arrange.trycloudflare.com](https://task-prize-adapter-arrange.trycloudflare.com)
+- **Live Public Application:** [https://newer-eleven-microphone-patches.trycloudflare.com](https://newer-eleven-microphone-patches.trycloudflare.com)
   *(Accessible instantly on all mobile phones and desktop browsers with no passwords or prompts)*
-- **Caregiver Dashboard:** [https://task-prize-adapter-arrange.trycloudflare.com/caregiver/dashboard](https://task-prize-adapter-arrange.trycloudflare.com/caregiver/dashboard)
-- **Patient Dashboard:** [https://task-prize-adapter-arrange.trycloudflare.com/patient/dashboard](https://task-prize-adapter-arrange.trycloudflare.com/patient/dashboard)
+- **Caregiver Dashboard:** [https://newer-eleven-microphone-patches.trycloudflare.com/caregiver/dashboard](https://newer-eleven-microphone-patches.trycloudflare.com/caregiver/dashboard)
+- **Patient Dashboard:** [https://newer-eleven-microphone-patches.trycloudflare.com/patient/dashboard](https://newer-eleven-microphone-patches.trycloudflare.com/patient/dashboard)
 
 ---
 
