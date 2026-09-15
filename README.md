@@ -9,10 +9,10 @@
 
 ## 🌐 Live Public Link
 
-- **Live Public Application:** [https://slip-giant-vancouver-affect.trycloudflare.com](https://slip-giant-vancouver-affect.trycloudflare.com)
+- **Live Public Application:** [https://ssl-byte-dimensions-oak.trycloudflare.com](https://ssl-byte-dimensions-oak.trycloudflare.com)
   *(Accessible instantly on all mobile phones and desktop browsers with no passwords or prompts)*
-- **Caregiver Dashboard:** [https://slip-giant-vancouver-affect.trycloudflare.com/caregiver/dashboard](https://slip-giant-vancouver-affect.trycloudflare.com/caregiver/dashboard)
-- **Patient Dashboard:** [https://slip-giant-vancouver-affect.trycloudflare.com/patient/dashboard](https://slip-giant-vancouver-affect.trycloudflare.com/patient/dashboard)
+- **Caregiver Dashboard:** [https://ssl-byte-dimensions-oak.trycloudflare.com/caregiver/dashboard](https://ssl-byte-dimensions-oak.trycloudflare.com/caregiver/dashboard)
+- **Patient Dashboard:** [https://ssl-byte-dimensions-oak.trycloudflare.com/patient/dashboard](https://ssl-byte-dimensions-oak.trycloudflare.com/patient/dashboard)
 
 ---
 
